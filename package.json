@@ -1,0 +1,31 @@
+{
+  "name": "dora-cli",
+  "version": "1.0.0",
+  "description": "Semantic search for the command line using LLMs.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "dora": "bin/index.js"
+  },
+  "type": "module",
+  "keywords": [
+    "search",
+    "cli",
+    "llm"
+  ],
+  "author": "Aman Tsegai",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "chromadb": "^2.0.1",
+    "commander": "^13.1.0",
+    "figlet": "^1.8.0",
+    "md5": "^2.3.0",
+    "ollama": "^0.5.14",
+    "open": "^10.1.0",
+    "ora": "^8.2.0",
+    "uuid": "^11.1.0"
+  }
+}
