@@ -21,7 +21,7 @@ Dora is a locally running CLI tool that crawls and embeds your local directories
 ---
 
 ## Requirements
-Dora requires Ollama and ChromDB.
+Dora requires Ollama and ChromaDB.
 
 ### Ollama
 Dora runs locally and uses Ollama for inference and embedding.
@@ -45,7 +45,7 @@ cd dora-cli
 ```
 
 ### Run install.sh Script
-Run the `install.sh` script to run Docker images, install node dependencies  and link the `dora` command.
+Run the `install.sh` script to run Docker images for required services, install node dependencies  and link the `dora` command.
 ```bash
 sh install.sh
 ```
@@ -53,7 +53,9 @@ sh install.sh
 Alternatively, you can run the commands manually and/or skip the Docker step if you have Ollama and ChromaDB installed already.
 See below for manual install.
 
-### Setup Services
+
+### Without install.sh Script
+#### Setup Services
 Similar to the [desktop version](https://github.com/space0blaster/dora), I have provided a Docker `compose.yaml` file
 for the required services (it's the same yaml file). If you're not familiar with Docker, you can download it [here](https://docker.com).
 
@@ -63,20 +65,19 @@ docker compose up -d
 ```
 You should have Ollama and ChromaDB running at ports 11434 and 8000 respectively.
 
-### Install Dependencies
+#### Install Dependencies
 Install Dora dependencies. The following command will pull and install them for you.
 ```bash
 npm install
 ```
 
-### Link Command
+#### Link Command
 The last step is to link the `dora` command so you can use the cli from outside the install/dev directory.
 ```bash
 npm link
 ```
 
 You should be good to go, give it a try by running `dora about` or `dora --help` on your terminal.
-
 
 ---
 
